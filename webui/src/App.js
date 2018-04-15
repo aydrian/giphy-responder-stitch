@@ -44,7 +44,7 @@ class App extends Component {
                 <ul className="gif-list">
                   { response.gifs.map(gif => {
                     return (
-                      <li key={gif.id}><a href={gif.url} target="_blank"><img src={gif.src} alt={gif.title || "no title"} /></a></li>
+                      <li key={gif.id}><a href={gif.url} target="_blank"><img src={gif.src} alt={gif.title || "no title"} title={gif.title || "no title"} /></a></li>
                     )
                   })}
                 </ul>
@@ -52,6 +52,9 @@ class App extends Component {
             );
           })}
         </ul>
+        <div className="footer">
+          <p>Powered by <a href="https://www.mongodb.com">MongoDB</a>, <a href="https://www.sparkpost.com">SparkPost</a>, and <a href="https://giphy.com/">Giphy</a>.</p>
+        </div>
       </div>
     );
   }
