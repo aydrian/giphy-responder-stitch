@@ -34,10 +34,21 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Giphy Responder</h1>
         </header>
-        <ul>
+        <p className="App-intro">
+          Send an email to gifme@sup.aydrian.me with a subject of what you want gifs of.
+        </p>
+        <ul className="responses">
           { this.state.responses.map(response => {
             return (
-              <li key={response._id}>{response.search}</li>
+              <li key={response._id}><h2>{response.search}</h2>
+                <ul className="gif-list">
+                  { response.gifs.map(gif => {
+                    return (
+                      <li key={gif.id}><a href={gif.url} target="_blank"><img src={gif.src} alt={gif.title || "no title"} /></a></li>
+                    )
+                  })}
+                </ul>
+              </li>
             );
           })}
         </ul>
