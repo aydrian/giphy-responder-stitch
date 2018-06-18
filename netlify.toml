@@ -1,0 +1,7 @@
+[Settings]
+ID = "giphy-responder"
+
+[build]
+base = "webui/"
+publish = "webui/build/"
+command = "npm run build"
