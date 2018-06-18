@@ -1,0 +1,12 @@
+{
+    "id": "5aa018d98f25b971a6f5ee77",
+    "name": "incoming",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "POST",
+        "secret": "purplemonkeydishwasher",
+        "secretAsQueryParam": true
+    },
+    "respond_result": false
+}

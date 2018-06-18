@@ -1,0 +1,10 @@
+{
+    "id": "5aa037d2cfb737497ec8ff20",
+    "name": "POST",
+    "actions": [
+        "post"
+    ],
+    "when": {
+        "%%args.url.host": "api.sparkpost.com"
+    }
+}
